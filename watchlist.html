@@ -14,15 +14,31 @@
     <link rel="stylesheet" href="./index.css">
 
     <!-- JS -->
-    <script src="./index.js" defer></script>
+    <script src="./watchlist.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <title>Watchlist</title>
 </head>
 
 <body>
     <div class="container">
-        <header></header>
-        <main></main>
+        <header class="header">
+            <h1>Find your film</h1>
+            <a class="watchlist-link" href="./index.html">search for movies</a>
+
+        </header>
+        <main>
+            
+            <div class="movie-container" id="watchlist-container">
+                
+            </div>
+
+            <div class="initail-content watchlist" id="initial-content">
+              <p class="start-text">Your watchlist is looking a little empty...</p>
+            <a href="./index.html"><span class="add-movie"><i class="fa-solid fa-circle-plus"></i><p>Let’s add some movies!</p></span></a>  
+            </div> 
+
+        </main>
         <footer></footer>
     </div>
 
