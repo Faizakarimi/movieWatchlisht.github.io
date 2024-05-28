@@ -33,18 +33,22 @@ a {
   text-decoration: none;
   color: #fff;
 }
-.movieLists .fa-film,
-.movieLists .start-text {
+.initail-content .fa-film,
+.initail-content .start-text {
   color: #2e2e2f;
 }
 
-.movieLists .fa-film {
+.initail-content .fa-film {
   font-size: 70px;
 }
 
-.movieLists .start-text {
+.initail-content .start-text {
   font-size: 1.125em;
   font-weight: 700;
+}
+
+.watchlist .start-text {
+  color: #787878;
 }
 
 /* movie details */
@@ -68,6 +72,7 @@ a {
 .fa-circle-plus {
   /* font-size: 20px; */
   color: #fff;
+  margin: 0;
   /* background-color: #fff; */
   /* border-radius: 50%; */
 }
@@ -75,6 +80,7 @@ a {
 .movie-description {
   font-size: 0.875em;
   color: #a5a5a5;
+  flex-grow: 1;
 }
 
 .fa-star {
@@ -83,22 +89,30 @@ a {
   font-size: 15px;
 }
 
+.fa-circle-minus {
+  font-size: smaller;
+}
+
+.fa-circle-minus:hover {
+  color: red;
+}
 /* Layout */
 
 .container {
   width: 34.375em;
-  height: 48.6875em;
+  height: auto;
   border: 1px solid brown;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   background-color: #121212;
+  /* padding-bottom: 20px; */
 }
 
 .header {
   width: 100%;
   height: 13em;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   background: url(./images/header-bg.png) #0e0e0e;
   background-position: center;
   background-size: cover;
@@ -142,6 +156,10 @@ a {
   color: #a5a5a5;
 }
 
+.search-bar input:focus{
+  background-color: none;
+}
+
 .search-btn {
   width: 7.5em;
   background-color: #4b4b4b;
@@ -156,22 +174,29 @@ a {
   text-align: center;
 }
 
-.movieLists {
-    width: 9.25em;
-    height: 5.625em; 
-    position: absolute;
-    top:27.375em ;
-    left: 12.5625em;
-    text-align: center;
-} 
+.search-btn:hover{
+  font-size: larger;
+}
+
+.initail-content {
+  width: auto;
+  height: 5.625em;
+  position: absolute;
+  top: 27.375em;
+  left: 12.5625em;
+  text-align: center;
+}
+.watchlist {
+  left: 93px;
+}
 
 .movie {
   width: 28.875em;
-  height: 9.213125em;
-  border: 2px solid blue;
-  position: absolute;
-  top: 269px;
-  left: 43px;
+  /* width: 100%; */
+  height: auto;
+  /* border: 2px solid blue; */
+  margin-top: 50px;
+  margin-left: 43px;
   display: flex;
   padding-bottom: 20px;
   border-bottom: 2px solid #2c2c2c;
@@ -192,16 +217,33 @@ a {
 }
 
 .add-to-watchlist {
+  margin-top: -1px;
+  padding: 0;
   margin-left: 10px;
+  cursor: pointer;
 }
 
-.watchlist-btn {
+.remove-btn:hover,
+.remove-btn:focus {
+  color: red;
+}
+.watchlist-btn:hover {
+  color: #fec654;
+}
+
+.watchlist-btn:focus {
+  color: green;
+}
+
+.watchlist-btn,
+.remove-btn {
   background: none;
   outline: none;
   border: none;
   color: #fff;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .details {
@@ -209,19 +251,37 @@ a {
   gap: 10px;
 }
 
-.movie-image{
-    width: 99px;
-    height: 147.41px;
-    border-radius: 2.33px;
+.movie-image {
+  width: 99px;
+  height: 147.41px;
+  border-radius: 2.33px;
 }
 
-.movie-image img{
-    width: 100%;
-    height: 100%;
+.movie-image img {
+  width: 100%;
+  height: 100%;
 }
 
-.movie-container{
-  width: 700px;
-  height: 500px;
-  border: 3px solid tomato;
+.movie-container {
+  width: 100%;
+  height: 48.6875em;
+  /* border: 3px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 100px; */
+  overflow: auto;
+  padding-bottom: 20px;
+}
+
+.watchlist .add-movie p {
+  display: inline;
+  margin-left: 10px;
+}
+.add-movie {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.border{
+ border-bottom: 2px solid #E5E7EB;
 }
