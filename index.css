@@ -264,7 +264,7 @@ a {
 
 .movie-container {
   width: 100%;
-  height: 100%;
+  height: 48.6875em;
   /* border: 3px solid tomato; */
   display: flex;
   flex-direction: column;
