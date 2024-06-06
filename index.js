@@ -29,7 +29,7 @@ searchBtn.addEventListener('click', function () {
 async function fetchMovies(searchText) {
     titlesArray.length = 0
     try {
-        const res = await fetch(`http://www.omdbapi.com/?apikey=ef53b83d&s=${searchText}`)
+        const res = await fetch(`https://www.omdbapi.com/?apikey=ef53b83d&s=${searchText}`)
         // console.log(res)
         const data = await res.json()
 
@@ -92,7 +92,7 @@ async function findMovie(searchItem) {
     searchedMovies.length = 0
 
     for (const item of searchItem) {
-        const res = await fetch(`http://www.omdbapi.com/?apikey=ef53b83d&t=${item}&plot=short`)
+        const res = await fetch(`https://www.omdbapi.com/?apikey=ef53b83d&t=${item}&plot=short`)
         const data = await res.json()
         searchedMovies.push(data)
 
